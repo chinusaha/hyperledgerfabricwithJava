@@ -1,4 +1,22 @@
-# Hyperledger fabric-sdk-java Basics Tutorial
+## Quick Start
+
+step 1 : git clone https://github.com/hyperledger/fabric-samples.git
+step 2: fabric-samples/scripts/bootstrap.sh script will download the docker images and tag them for you.
+step 3: fabric-samples/fabcar/startFabric.sh can be used to start the fabcar network
+    step 3a: In case you are experiencing issues you might want to do some docker cleanup
+        ```
+            # !!! THIS WILL REMOVE ALL YOUR DOCKER CONTAINERS AND IMAGES !!!
+            # remove all containers
+            $ docker rm $(docker ps -qa)
+            # remove all mages
+            $ docker rmi --force $(docker images -qa)
+          ```
+    step 4: git clone https://github.com/chinusaha/hyperledgerfabricwithJava.git
+    step 5:navigate to hyperledgerfabricwithJava/.
+    step 6 : run the "MVN install" command
+    step 7 : execute the main method and see the output.
+    
+# Hyperledger fabric-sdk-java Basics Tutorial in Details.
 
 This quick tutorial is for all Java developers, who started to look into Hyperledger Fabric platform (https://hyperledger.org/) and would like to use fabric-sdk-java for their projects.
 
@@ -27,11 +45,7 @@ If you were successfully able to get through these two tutorials, then we are re
     # prune networks
     $ docker network prune
 ```
-
-Enough talking and let’s get something up and running….
-
 Clone the example code from here into demo directory
-
     git clone https://github.com/chinusaha/hyperledgerfabricwithJava.git tutorial
 
 and navigate to hyperledgerfabricwithJava/.
